@@ -15,8 +15,7 @@ This module covers:
 
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import List, Tuple
+from typing import List
 
 import numpy as np
 import pandas as pd
@@ -49,7 +48,8 @@ class DataValidationError(ValueError):
 
 def validate_columns(df: pd.DataFrame, required_columns: List[str]) -> None:
     """Validate that required columns exist in the dataframe."""
-    missing_columns = [col for col in required_columns if col not in df.columns]
+    missing_columns = [
+        col for col in required_columns if col not in df.columns]
 
     if missing_columns:
         raise DataValidationError(
