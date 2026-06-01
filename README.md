@@ -2,6 +2,8 @@
 
 ## Project Overview
 
+**Dataset Source:** Xente Transaction Dataset — 10 Academy Week 4 Credit Risk Modeling Challenge.
+
 Bati Bank is partnering with an eCommerce company to support a Buy-Now-Pay-Later credit service. The goal of this project is to build a credit risk probability model using customer transaction behavior from the Xente platform.
 
 The raw dataset does not contain a direct default label. Therefore, the project will use behavioral patterns, especially Recency, Frequency, and Monetary value, to engineer a proxy risk target for model training.
@@ -69,3 +71,61 @@ credit-risk-model/
 3. Product category, provider, and channel variables may contain useful behavioral signals.
 4. Time-based transaction features can support customer behavior analysis.
 5. RFM analysis will be used later to create the proxy high-risk target.
+
+
+## Setup Instructions
+
+```bash
+git clone https://github.com/MariyaEA/credit-risk-probability-model.git
+cd credit-risk-probability-model
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+jupyter notebook
+
+```
+
+## Data Source
+
+The dataset used in this project is the Xente transaction dataset provided as part of the 10 Academy Week 4 Credit Risk Modeling Challenge.
+
+The dataset contains anonymized customer transaction records including:
+
+* Transaction identifiers
+* Customer identifiers
+* Transaction amounts and values
+* Product categories
+* Pricing strategies
+* Fraud indicators
+* Transaction timestamps
+* Channel information
+
+The raw dataset is excluded from version control and should be stored locally inside:
+
+```text
+data/raw/
+```
+
+---
+
+## Business and Regulatory Relevance
+
+The exploratory analysis performed in this project is directly connected to future credit risk modeling and Basel II compliance requirements.
+
+The EDA findings help identify:
+
+* Customer behavioral patterns relevant to creditworthiness
+* Potential predictive features for proxy risk modeling
+* Data quality and preprocessing requirements
+* Feature engineering opportunities
+* Sources of skewness, imbalance, and outlier influence that may affect model reliability
+
+These findings will later support the development of interpretable and regulator-friendly credit scoring models capable of informing:
+
+* Customer credit qualification
+* Loan approval decisions
+* Credit limit assignment
+* Risk-based pricing strategies
+* Portfolio monitoring and risk management
+
+The project emphasizes explainability, documentation, and transparent modeling practices aligned with Basel II expectations for responsible financial risk assessment.
