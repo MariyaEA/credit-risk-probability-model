@@ -5,3 +5,10 @@ seaborn
 scikit-learn
 jupyter
 notebook
+mlflow
+fastapi
+uvicorn
+pydantic
+pytest
+flake8
+python-multipart
